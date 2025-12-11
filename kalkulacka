@@ -1,0 +1,10 @@
+def do_calculation(firsty_number, secondy_number):
+    plus = firsty_number + secondy_number
+    minus = firsty_number - secondy_number
+    krat = firsty_number * secondy_number
+    delenie = firsty_number / secondy_number
+    player.say("Plus: " + str(plus))
+    player.say("Minus: " + str(minus))
+    player.say("Krat: " + str(krat))
+    player.say("Delenie: " + str(delenie))
+player.on_chat("citaj", do_calculation)
