@@ -1,0 +1,16 @@
+def build_sliding_hill(max_height, width):
+    agent.teleport_to_player()
+    agent.set_slot(1)
+    for wall_height in range(max_height, 0, -1):
+        for column in range(width):
+            for height in range(1, wall_height, 1):
+                if height % 9 == 0:
+                    agent.move(UP, 1)
+                agent.place(FORWARD)
+            while not (agent.detect(AgentDetection.BLOCK, DOWN)):
+                agent.move(DOWN, 1)
+            agent.move(LEFT, 1)
+        agent.move(RIGHT, width)
+        agent.move(BACK, 1)
+
+player.on_chat("build", build_sliding_hill)
