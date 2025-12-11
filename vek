@@ -1,0 +1,15 @@
+def check_eligibility(age):
+    if age < 15:
+        player.say("Mozes robic vodicak na motorku.")
+    elif age < 17:
+        player.say("Mozes zacat robit vodicak na auto.")
+    elif age < 18:
+        player.say("Uz mozes sofrovat auto.")
+    elif age < 21:
+        player.say("Mozes soferovat vykonnejsiu motorku.")
+    elif age < 24:
+        player.say("Uz mozes soferovat hocico, ak mas vodicak na ta.")
+    else:
+        player.say("Si moc mlady.")
+
+player.on_chat("vek", check_eligibility)
