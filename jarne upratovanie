@@ -1,0 +1,19 @@
+def do_cleaning(size):
+    agent.teleport_to_player()
+    for column in range(size):
+        for land in range(size - 1):
+            agent.destroy(FORWARD)
+            agent.move(FORWARD, 1)
+            agent.collect_all()
+        if column % 2 == 1:
+            agent.turn(TurnDirection.LEFT)
+            agent.destroy(FORWARD)
+            agent.move(FORWARD, 1)
+            agent.turn_left()
+        else:
+            agent.turn(TurnDirection.RIGHT)
+            agent.destroy(FORWARD)
+            agent.move(FORWARD, 1)
+            agent.turn_right()
+
+player.on_chat("clean", do_cleaning)
