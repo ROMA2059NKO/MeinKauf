@@ -1,0 +1,30 @@
+def on_chat():
+    agent.teleport_to_player()
+    agent.move(UP, 1)
+    for i in range(7):
+        agent.set_slot(1)
+        
+        agent.place(DOWN)
+    pass
+    agent.set_slot(2)
+    agent.place(DOWN)
+    agent.set_slot(1)
+    agent.place(DOWN)
+    agent.place(DOWN)
+    agent.set_slot(2)
+    agent.place(DOWN)
+    agent.turn_left()
+    agent.move(FORWARD, 1)
+    agent.turn_left()
+    for e in range(7):
+        for y in range(10):
+            agent.set_slot(1)
+            agent.place(DOWN)
+        pass
+        agent.turn_left()
+        agent.move(FORWARD, 1)
+        agent.turn_left()
+    pass
+
+    pass
+player.on_chat("stavaj", on_chat)
