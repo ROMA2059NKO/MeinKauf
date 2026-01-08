@@ -1,0 +1,5 @@
+blocks.fill(GRASS, player.position(), pos(23, 3, -23), FillOperation.REPLACE)
+for n in range (242):
+    agent.teleport(randpos(pos(1, 0, -1), pos(23, 0, -23)), WEST)
+    agent.destroy(DOWN)
+    agent.destroy(UP)
