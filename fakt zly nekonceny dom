@@ -28,3 +28,6 @@ def on_chat():
 
     pass
 player.on_chat("stavaj", on_chat)
+
+
+more dig
